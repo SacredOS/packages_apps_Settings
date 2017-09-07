@@ -165,4 +165,7 @@ public class Settings extends SettingsActivity {
     public static class AccountDashboardActivity extends SettingsActivity {}
     public static class SystemDashboardActivity extends SettingsActivity {}
 
+    // SacredOS Additions.
+    public static class CelestialWaysSettingsActivity extends SettingsActivity {}
+
 }
