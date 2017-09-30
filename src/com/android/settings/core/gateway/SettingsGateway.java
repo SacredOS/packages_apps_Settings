@@ -133,6 +133,7 @@ import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
 
 import org.sacredos.celestialways.PartsFragment;
+import org.sacredos.celestialways.HeadsUpSettings;
 
 public class SettingsGateway {
 
@@ -256,6 +257,7 @@ public class SettingsGateway {
             BluetoothDeviceDetailsFragment.class.getName(),
             DataUsageList.class.getName(),
             PartsFragment.class.getName(),
+            HeadsUpSettings.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
