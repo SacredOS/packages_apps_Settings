@@ -195,5 +195,8 @@ public class Settings extends SettingsActivity {
 
     // SacredOS Additions.
     public static class CelestialSettingsActivity extends SettingsActivity {}
-
+    public static class NavigationSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class FlingSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class SmartbarSettingsActivity extends SettingsActivity { /* empty */ }
+    public static class PulseSettingsActivity extends SettingsActivity { /* empty */ }
 }
