@@ -22,6 +22,8 @@ import android.text.BidiFormatter;
 
 import com.android.settings.R;
 
+import android.os.SystemProperties;
+
 public class BuildNumberDialogController {
 
     @VisibleForTesting
@@ -33,11 +35,23 @@ public class BuildNumberDialogController {
         mDialog = dialog;
     }
 
+    private String getSacredOSVersion() {
+        String sacredDisplayVersion = SystemProperties.get("ro.sacred.display.version","");
+        return sacredDisplayVersion.equals("") ? "" : sacredDisplayVersion;
+    }
+
     /**
      * Updates the build number to the dialog.
      */
     public void initialize() {
-        mDialog.setText(BUILD_NUMBER_VALUE_ID,
-                BidiFormatter.getInstance().unicodeWrap(Build.DISPLAY));
+        
+        StringBuilder sb = new StringBuilder();
+        sb.append(BidiFormatter.getInstance().unicodeWrap(Build.DISPLAY));
+        String sacredOSVersion = getSacredOSVersion();
+        if (!sacredOSVersion.equals("")){
+            sb.append("\n");
+            sb.append(sacredOSVersion);
+        }
+        mDialog.setText(BUILD_NUMBER_VALUE_ID, sb.toString());
     }
 }
