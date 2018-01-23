@@ -16,4 +16,7 @@
     <string name="changelog_title">Changelog</string>
     <string name="changelog_summary">Since the last update</string>
     <string name="changelog_error">Unable to load changelog</string>
+
+    <string name="app_package_name_title">Package</string>
+    <string name="app_version_title">Version</string>
 </resources>
